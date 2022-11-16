@@ -44,9 +44,9 @@ elif choice=='DashBoardDemo':
  
   fig2 = plt.figure(figsize=(20,10))
   plt.subplot(121)
-  sns.barplot(data=df[df['Trạng Thái']==status[0]].groupby('Tên Shop').sum().sort_values(by='Khối Lượng', ascending=False).reset_index().head(20), y='Tên Shop', x='Khối Lượng', palette='Blues')
+  sns.barplot(data=df[df['Trạng Thái']==status].groupby('Tên Shop').sum().sort_values(by='Khối Lượng', ascending=False).reset_index().head(20), y='Tên Shop', x='Khối Lượng', palette='Blues')
   plt.subplot(122)
-  sns.barplot(data=df[df['Trạng Thái']==status[0].groupby('Tên Shop').sum().sort_values(by='Thu Hộ', ascending=False).reset_index().head(20), y='Tên Shop', x='Thu Hộ', palette='Blues')
+  sns.barplot(data=df[df['Trạng Thái']==status.groupby('Tên Shop').sum().sort_values(by='Thu Hộ', ascending=False).reset_index().head(20), y='Tên Shop', x='Thu Hộ', palette='Blues')
   plt.tight_layout()
   
   pyplot(fig2)
