@@ -1,5 +1,6 @@
 from streamlit import *
-from plotly.express import *
+from plotly import *
+# import plotly.express as px
 
 title('Demo DashBoard')
 
