@@ -3,7 +3,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-write("<h1 style='color:red'>Demo DashBoard</h1>")
+write("# Demo DashBoard")
 
 menu = ["Introduction", "DashBoardDemo"]
 choice = sidebar.selectbox('Menu', menu)
@@ -20,7 +20,7 @@ text('This dataset is raw data from My company. We support goods express deliver
 df = pd.read_excel(uploaded_file)
 dataframe(df.head())
 
-st.write("<h4 style='color:blue; font-weight:bold'>Relationship between KhoiLuong And Revenue</h4>")
+write("# Relationship between KhoiLuong And Revenue")")
 count_TrangThai = df[['Trạng Thái', 'Thu Hộ']].groupby(['Trạng Thái']).count()
 bar_chart(count_TrangThai)
 
