@@ -22,22 +22,26 @@ elif choice=='DashBoardDemo':
   df = pd.read_excel(uploaded_file)
   dataframe(df.head())
   
+  
+  
   write("# Number of orders counted by Trạng thái")
   count_TrangThai = df[['Trạng Thái', 'Thu Hộ']].groupby(['Trạng Thái']).count()
   bar_chart(count_TrangThai)
   
   write("# Relationship between KhoiLuong And Revenue")
   fig, ax = plt.subplots()
-  ax = sns.scatterplot(data=df, x='Khối Lượng', y='Thu Hộ')
+  ax = sns.swarmplot(data=df, x='Trạng Thái', y='Thu Hộ')
 
   pyplot(fig)
+  
+  status = multiselect("Status", df['Trạng Thái'].unique())
   
   write("# Revenue based on Trạng Thái")
   fig2 = plt.figure(figsize=(20,10))
   plt.subplot(121)
-  sns.barplot(data=df.groupby('Tên Shop').sum().sort_values(by='Khối Lượng').reset_index().head(20), y='Tên Shop', x='Khối Lượng', palette='Blues')
+  sns.barplot(data=df[df['Trạng Thái']==status].groupby('Tên Shop').sum().sort_values(by='Khối Lượng').reset_index().head(20), y='Tên Shop', x='Khối Lượng', palette='Blues')
   plt.subplot(122)
-  sns.barplot(data=df.groupby('Tên Shop').sum().sort_values(by='Thu Hộ').reset_index().head(20), y='Tên Shop', x='Thu Hộ', palette='Blues')
+  sns.barplot(data=df[df['Trạng Thái']==status].groupby('Tên Shop').sum().sort_values(by='Thu Hộ').reset_index().head(20), y='Tên Shop', x='Thu Hộ', palette='Blues')
   plt.tight_layout()
   
   pyplot(fig2)
