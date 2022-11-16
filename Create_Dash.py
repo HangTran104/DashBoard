@@ -3,7 +3,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-st.write(<h1 style='color:red'>Demo DashBoard</h1>)
+st.markdown(<h1 style='color:red'>Demo DashBoard</h1>)
 
 menu = ["Introduction", "DashBoardDemo"]
 choice = sidebar.selectbox('Menu', menu)
