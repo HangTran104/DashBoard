@@ -31,13 +31,15 @@ elif choice=='DashBoardDemo':
   write("# Relationship between KhoiLuong And Revenue")
   fig, ax = plt.subplots()
   ax = sns.swarmplot(data=df, x='Trạng Thái', y='Thu Hộ')
+  plt.xticks(rotation=90)
 
   pyplot(fig)
   
   
   write("# Revenue based on Trạng Thái")
-  status = multiselect("Status", df['Trạng Thái'].unique())
-  write(status[0])
+  status = selectbox("Status", options=df['Trạng Thái'].unique())
+  submit = button('Submit')
+  write(status)
   
  
   fig2 = plt.figure(figsize=(20,10))
