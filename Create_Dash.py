@@ -4,19 +4,21 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 write("# Demo DashBoard")
+uploaded_file = file_uploader("Choose a file")
 
 menu = ["Introduction", "DashBoardDemo"]
 choice = sidebar.selectbox('Menu', menu)
 if choice=='Introduction':
   subheader("Business Introduction")
-  subheader('Load DataFrame: ')
-  uploaded_file = file_uploader("Choose a file")
+  
+  
 
 
 elif choice=='DashBoardDemo':
   subheader('Demo Dashboard Of Revenue')
   subheader('Data Description:')
   text('This dataset is raw data from My company. We support goods express deliver service.')
+  subheader('Load DataFrame: ')
   df = pd.read_excel(uploaded_file)
   dataframe(df.head())
   
