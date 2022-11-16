@@ -20,7 +20,7 @@ text('This dataset is raw data from My company. We support goods express deliver
 df = pd.read_excel(uploaded_file)
 dataframe(df.head())
 
-write("# Relationship between KhoiLuong And Revenue")")
+write("# Relationship between KhoiLuong And Revenue")
 count_TrangThai = df[['Trạng Thái', 'Thu Hộ']].groupby(['Trạng Thái']).count()
 bar_chart(count_TrangThai)
 
