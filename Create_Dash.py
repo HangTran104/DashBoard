@@ -7,7 +7,7 @@ write("# Demo DashBoard")
 
 menu = ["Introduction", "DashBoardDemo"]
 choice = sidebar.selectbox('Menu', menu)
-if choice=='DataIntroduction':
+if choice=='Introduction':
   subheader("Business Introduction")
   subheader('Load DataFrame: ')
   uploaded_file = file_uploader("Choose a file")
