@@ -1,6 +1,9 @@
 from streamlit import *
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-title('Demo DashBoard')
+st.markdown(<h1 style='color:red'>'Demo DashBoard'</h1>)
 
 menu = ["Introduction", "DashBoardDemo"]
 choice = sidebar.selectbox('Menu', menu)
@@ -12,7 +15,10 @@ elif choice=='DashBoardDemo':
 subheader('Load DataFrame: ')
 uploaded_file = file_uploader("Choose a file")
 subheader('Data Description:')
+text('This dataset is raw data from My company. We support goods express deliver service.')
 
+df = pd.read_excel(uploaded_file)
+dataframe(df.head())
 
 
 
