@@ -37,6 +37,7 @@ elif choice=='DashBoardDemo':
   
   write("# Revenue based on Trạng Thái")
   status = multiselect("Status", df['Trạng Thái'].unique())
+  write(status)
   
  
   fig2 = plt.figure(figsize=(20,10))
