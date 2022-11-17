@@ -37,7 +37,7 @@ elif choice=='DashBoardDemo':
   
   
   write("# Revenue based on Trạng Thái")
-  status = checkbox("Status", options=df['Trạng Thái'].unique())
+  status = multiselect("Status", options=df['Trạng Thái'].unique())
   submit = button('Submit')
   write(status)
   
