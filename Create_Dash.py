@@ -41,10 +41,10 @@ elif choice=='DashBoardDemo':
   submit = button('Submit')
   write(type(status))
   
-#   df_plot=pd.DataFrame(columns=df.columns)
-#   for i in range(len(status)):
-#     filtered_df = df[df["Trạng Thái"].isin(status)]
-#     df_plot=pd.concat(df_plot,filtered_df )
+  df_plot=pd.DataFrame(columns=df.columns)
+  for i in range(len(status)):
+    filtered_df = df[df["Trạng Thái"].isin(status)]
+    df_plot=pd.concat(df_plot,filtered_df )
   
   
  
