@@ -42,7 +42,7 @@ elif choice=='DashBoardDemo':
   write(status)
   
   df_plot=pd.DataFrame(columns=df.columns)
-  for i in range(len(status):
+  for i in range(len(status)):
                  df[df['Trạng Thái']==i]
                  df_plot=pd.concat(df_plot,df[df['Trạng Thái']==status[i]] 
   
