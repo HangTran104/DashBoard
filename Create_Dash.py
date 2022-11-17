@@ -39,7 +39,7 @@ elif choice=='DashBoardDemo':
   write("# Revenue based on Trạng Thái")
   status = multiselect("Status", options=df['Trạng Thái'].unique())
   submit = button('Submit')
-  write(status)
+  write(type(status))
   
   df_plot=pd.DataFrame(columns=df.columns)
   for i in range(len(status)):
