@@ -43,7 +43,7 @@ elif choice=='DashBoardDemo':
   
   df_plot=pd.DataFrame(columns=df.columns)
   for i in range(len(status)):
-                 filtered_df = df[df["app"].isin(status)]
+                 filtered_df = df[df["Trạng Thái"].isin(status)]
                  df_plot=pd.concat(df_plot,filtered_df )
   
   
