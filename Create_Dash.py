@@ -37,7 +37,7 @@ elif choice=='DashBoardDemo':
   
   
   write("# Revenue based on Trạng Thái")
-  status = multiselect("Status", options=df['Trạng Thái'].unique().to_list())
+  status = multiselect("Status", options=df['Trạng Thái'].unique())
   submit = button('Submit')
   write(type(status))
   
@@ -48,18 +48,18 @@ elif choice=='DashBoardDemo':
   
   
  
-#   fig2 = plt.figure(figsize=(20,10))
-#   plt.subplot(121)
-#   sns.barplot(data=df_plot.groupby('Tên Shop').sum().sort_values(by='Khối Lượng', ascending=False).reset_index().head(20), y='Tên Shop', x='Khối Lượng', palette='Blues')
-#   plt.subplot(122)
-#   sns.barplot(data=df_plot.groupby('Tên Shop').sum().sort_values(by='Thu Hộ', ascending=False).reset_index().head(20), y='Tên Shop', x='Thu Hộ', palette='Blues')
-#   plt.tight_layout()                               
   fig2 = plt.figure(figsize=(20,10))
   plt.subplot(121)
-  sns.barplot(data=df[df['Trạng Thái']==status].groupby('Tên Shop').sum().sort_values(by='Khối Lượng', ascending=False).reset_index().head(20), y='Tên Shop', x='Khối Lượng', palette='Blues')
+  sns.barplot(data=df_plot.groupby('Tên Shop').sum().sort_values(by='Khối Lượng', ascending=False).reset_index().head(20), y='Tên Shop', x='Khối Lượng', palette='Blues')
   plt.subplot(122)
-  sns.barplot(data=df[df['Trạng Thái']==status].groupby('Tên Shop').sum().sort_values(by='Thu Hộ', ascending=False).reset_index().head(20), y='Tên Shop', x='Thu Hộ', palette='Blues')
-  plt.tight_layout()
+  sns.barplot(data=df_plot.groupby('Tên Shop').sum().sort_values(by='Thu Hộ', ascending=False).reset_index().head(20), y='Tên Shop', x='Thu Hộ', palette='Blues')
+  plt.tight_layout()                               
+#   fig2 = plt.figure(figsize=(20,10))
+#   plt.subplot(121)
+#   sns.barplot(data=df[df['Trạng Thái']==status].groupby('Tên Shop').sum().sort_values(by='Khối Lượng', ascending=False).reset_index().head(20), y='Tên Shop', x='Khối Lượng', palette='Blues')
+#   plt.subplot(122)
+#   sns.barplot(data=df[df['Trạng Thái']==status].groupby('Tên Shop').sum().sort_values(by='Thu Hộ', ascending=False).reset_index().head(20), y='Tên Shop', x='Thu Hộ', palette='Blues')
+#   plt.tight_layout()
                                    
   
   pyplot(fig2)
